@@ -1,0 +1,41 @@
+body {
+    background: rgb(245, 243, 243);
+}
+.comment {
+    border: 2px solid tomato;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.comment-click {
+    border: 2px solid limegreen;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.country {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    background: rgb(240, 239, 239);
+}
+.map-btn {
+    margin-bottom: 5px;
+}
+.map-btn a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #4169E1;
+    border: 2px solid #4169E1;
+    transition: all .3s ease-in-out;
+}
+.map-btn a:hover {
+    color: black;
+    background: transparent;
+}
