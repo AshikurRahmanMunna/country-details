@@ -27,7 +27,9 @@ body {
   color: black;
   background: transparent;
 }
-
+.loader {
+  position: fixed;
+}
 @media only screen and (max-width: 675px) {
   .grid-3 {
     display: grid;

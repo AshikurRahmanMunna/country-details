@@ -3,16 +3,19 @@ const loadCountries = () => {
     fetch(url)
     .then(res => res.json())
     .then(data => displayCountries(data));
+    document.getElementById('heading').style.display = 'none';
+    document.getElementById('countries').style.display = 'none';
+    document.getElementById('spinner').style.display = 'block';
 }
 loadCountries()
 const displayCountries = countries => {
     const countriesContainer = document.getElementById('countries');
     countriesContainer.classList.add('grid-3')
-    countries.forEach(country =>  {
+    countries.forEach(country => {
         console.log(country)
         const div = document.createElement('div');
         div.innerHTML = `
-            <div class="country shadow">
+            <div id="country" class="country shadow">
                 <div class="row">
                 <div class="col-4">
                     <img class="img-fluid" src="${country.flags.png}">
@@ -31,5 +34,9 @@ const displayCountries = countries => {
             </div>
         `;
         countriesContainer.appendChild(div);
-    })
+        document.getElementById('heading').style.display = 'block';
+        document.getElementById('countries').style.display = 'grid';
+        const spinner = document.getElementById('spinner');
+        spinner.classList.add('d-none');
+    });
 }
